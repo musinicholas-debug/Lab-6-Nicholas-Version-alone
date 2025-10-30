@@ -79,19 +79,24 @@ sns.relplot(data=df, x="Life expectancy, female", y="Women in national parliamen
 #Question 6 
 
 #Part A
-df["Emissions per capita"] = (df["Greenhouse gas emissions"] / df["Population"]).round(2)
+df["Emissions per capita"] = (df["Greenhouse gas emissions"] / df["Population"])
 sns.relplot(data=df, x="Internet use", y="Emissions per capita", hue="Region")
-#There is no real correalion I notice that even countries with almost 0.000 emission per capita have nearly 100% internet use. One notible thing worth metioning, is that the more emission per capita that a country has the more it tends to stray to the left of the x-axis(internet use)
+#
 
 #Part B
-High_emission_country = df[df["Greenhouse gas emissions"] > 0.03]
-print(High_emission_country)
-for i in High_emission_country["Country Name"] :
+filtered_df = df[df["Emissions per capita"] > 0.03]
+print(filtered_df)
+for i in filtered_df["Country Name"] :
         print(i)
+#There are only 2 countries that fit the criterias for a high emission countries
 
 #Part C
+sns.relplot(data=filtered_df, x="Internet use", y="Country Name",)
+#There a strong correlation because more then 95% of both Quatar and Brunei Darussalam populations use the internet
 
-sns.relplot(data=df, x="Internet use", y="High_emission_country", col="Region")
+#Part D
+
+
         
 
 
