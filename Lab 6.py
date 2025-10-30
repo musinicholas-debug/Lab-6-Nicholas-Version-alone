@@ -48,11 +48,14 @@ sns.relplot(data=df, x="Life expectancy, female", y="GNI per capita")
 sns.relplot(data=df, x="Life expectancy, male", y="GNI per capita", hue="Region")
 sns.relplot(data=df, x="Life expectancy, female", y="GNI per capita", hue="Region")
 
+
 #Question 3 
 sns.relplot(data=df, kind="line", x="Life expectancy, female", y="GNI per capita", hue="Region", errorbar="sd")
 
+
 #Question 4 
 sns.lmplot(data=df, x="Life expectancy, female", y="GNI per capita", hue="Region")
+
 
 #Question 5 
 
