@@ -55,3 +55,23 @@ sns.relplot(data=df, kind="line", x="Life expectancy, female", y="GNI per capita
 sns.lmplot(data=df, x="Life expectancy, female", y="GNI per capita", hue="Region")
 
 #Question 5 
+
+#
+sns.relplot(data=df, x="Life expectancy, female", y="Greenhouse gas emissions", col="Region")
+#
+
+#
+sns.relplot(data=df, x="Life expectancy, female", y="Tertiary education, female", col="Region")
+#
+
+#
+sns.relplot(data=df, x="Life expectancy, female", y="Physicians", col="Region")
+#
+
+#
+sns.relplot(data=df, x="Life expectancy, female", y="Internet use", col="Region")
+#
+
+#
+sns.relplot(data=df, x="Life expectancy, female", y="Women in national parliament", col="Region")
+#
