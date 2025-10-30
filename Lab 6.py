@@ -58,20 +58,20 @@ sns.lmplot(data=df, x="Life expectancy, female", y="GNI per capita", hue="Region
 
 #Do greenhouse gas emissions in each region influence women’s life expectancy?
 sns.relplot(data=df, x="Life expectancy, female", y="Greenhouse gas emissions", col="Region")
-#
+#In each given region there is no real difference. For most countries the Greenhouse gas emission are relativately simalery to one another but female life expectancy still has a great difference espically in regions like africa we're certain contries have very low life expectancys and others very high despite having simalar Greenhouse gas emissions.
 
 #For a given region, is there a link between women’s tertiary education and their life expectancy?
 sns.relplot(data=df, x="Life expectancy, female", y="Tertiary education, female", col="Region")
-#
+#For this question the plots clearly demonstrate that the more females attend tertiarty education the longer they live. In every plot for each region this trend is noticable.
 
 #Does access to physicians impact women’s life expectancy in a given region?
 sns.relplot(data=df, x="Life expectancy, female", y="Physicians", col="Region")
-#
+#Once again the plots for each region with africa as the only outlier demonstrate that the more access a population has to physicans the longer in this specefic plots the women live. For africa in the ranges of life expectancy from 55 to 75 there is very little access to physicans so no correlation can be made.
 
 #How does life expectancy for women relate to Internet use in each region?
 sns.relplot(data=df, x="Life expectancy, female", y="Internet use", col="Region")
-#
+#Again in countries with high internet use female life expectancy is high this can logically attributed with high internet use meaning a highly developped country meaning a higher life expectancy because of good social and medical infrastructre
 
 #What is the relationship between women in national parliament and their life expectancy for each region?
 sns.relplot(data=df, x="Life expectancy, female", y="Women in national parliament", col="Region")
-#
+#Similary to question 1 of Part 4 Q5 no real correlation can be made the points for each region are very random indicating no real relationship.
