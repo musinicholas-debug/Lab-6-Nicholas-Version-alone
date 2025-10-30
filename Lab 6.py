@@ -75,3 +75,31 @@ sns.relplot(data=df, x="Life expectancy, female", y="Internet use", col="Region"
 #What is the relationship between women in national parliament and their life expectancy for each region?
 sns.relplot(data=df, x="Life expectancy, female", y="Women in national parliament", col="Region")
 #Similary to question 1 of Part 4 Q5 no real correlation can be made the points for each region are very random indicating no real relationship.
+
+#Question 6 
+
+#Part A
+df["Emissions per capita"] = (df["Greenhouse gas emissions"] / df["Population"]).round(2)
+sns.relplot(data=df, x="Internet use", y="Emissions per capita", hue="Region")
+#There is no real correalion I notice that even countries with almost 0.000 emission per capita have nearly 100% internet use. One notible thing worth metioning, is that the more emission per capita that a country has the more it tends to stray to the left of the x-axis(internet use)
+
+#Part B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
