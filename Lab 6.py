@@ -56,22 +56,22 @@ sns.lmplot(data=df, x="Life expectancy, female", y="GNI per capita", hue="Region
 
 #Question 5 
 
-#
+#Do greenhouse gas emissions in each region influence women’s life expectancy?
 sns.relplot(data=df, x="Life expectancy, female", y="Greenhouse gas emissions", col="Region")
 #
 
-#
+#For a given region, is there a link between women’s tertiary education and their life expectancy?
 sns.relplot(data=df, x="Life expectancy, female", y="Tertiary education, female", col="Region")
 #
 
-#
+#Does access to physicians impact women’s life expectancy in a given region?
 sns.relplot(data=df, x="Life expectancy, female", y="Physicians", col="Region")
 #
 
-#
+#How does life expectancy for women relate to Internet use in each region?
 sns.relplot(data=df, x="Life expectancy, female", y="Internet use", col="Region")
 #
 
-#
+#What is the relationship between women in national parliament and their life expectancy for each region?
 sns.relplot(data=df, x="Life expectancy, female", y="Women in national parliament", col="Region")
 #
