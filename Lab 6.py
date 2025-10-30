@@ -81,7 +81,7 @@ sns.relplot(data=df, x="Life expectancy, female", y="Women in national parliamen
 #Part A
 df["Emissions per capita"] = (df["Greenhouse gas emissions"] / df["Population"])
 sns.relplot(data=df, x="Internet use", y="Emissions per capita", hue="Region")
-#
+#Yes there is the plot shows that the more you approch the left of the x-axis so 100% internet use the more emissions per capita you have. 
 
 #Part B
 filtered_df = df[df["Emissions per capita"] > 0.03]
@@ -95,7 +95,13 @@ sns.relplot(data=filtered_df, x="Internet use", y="Country Name",)
 #There a strong correlation because more then 95% of both Quatar and Brunei Darussalam populations use the internet
 
 #Part D
-
+filtered_df2 = df[df["High Income Economy"] > 0.03]
+print(filtered_df2)
+for i in filtered_df2["Country Name"] :
+        print(i)
+        
+sns.relplot(data=filtered_df2, x="High Income Economy", y="Emissions per capita",)
+# No not all high income economies have high emissions after seeing the plot you can see that many countries fall below the 0.03 high emission cutoff and still are high income economies.
 
         
 
